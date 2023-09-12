@@ -2,11 +2,13 @@ import React from "react";
 import { styled } from "styled-components";
 
 import TopBar from "../components/TopBar";
+import Banner from "../components/Banner";
 
 const Main = () => {
   return (
     <Wrapper>
       <TopBar />
+      <Banner />
     </Wrapper>
   );
 };

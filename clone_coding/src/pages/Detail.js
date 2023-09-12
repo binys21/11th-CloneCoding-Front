@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
 import TopBar from "../components/TopBar";
 
-const DetailPage = () => {
+const Detail = () => {
   return (
     <Wrapper>
       <TopBar />
@@ -14,5 +14,6 @@ const DetailPage = () => {
 };
 
 export default Detail;
+
 const Wrapper = styled.div``;
 const Content = styled.div``;

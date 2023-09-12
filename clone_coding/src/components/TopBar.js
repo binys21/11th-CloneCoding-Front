@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
 
-import delBtn from "../images/delBtn.svg";
+import deleteBtn from "../images/delete.svg";
+import carrot from "../images/carrot.png";
 
 const TopBar = () => {
   const [text, setText] = useState("");
@@ -18,7 +19,7 @@ const TopBar = () => {
     <Wrapper>
       <LeftWrapper>
         <Logo>
-          {/* 당근로고이미지 넣기 */}
+          <img src={carrot} />
           <span>당근</span>
         </Logo>
         <BtnBox>
@@ -40,7 +41,7 @@ const TopBar = () => {
           />
           {text && ( //텍스트 입력시 삭제 이미지
             <DeleteBtn onClick={deleteText}>
-              <img src={delBtn} />
+              <img src={deleteBtn} />
             </DeleteBtn>
           )}
         </InputWrapper>
