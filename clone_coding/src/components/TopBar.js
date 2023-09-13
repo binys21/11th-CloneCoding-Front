@@ -22,13 +22,14 @@ const TopBar = () => {
           <img src={carrot} />
           <span>당근</span>
         </Logo>
-        <BtnBox>
-          <button id="clicked">중고거래</button>
+
+        <BtnMenu>
+          <button id="orange">중고거래</button>
           <button>동네가게</button>
           <button>알바</button>
           <button>부동산 직거래</button>
           <button>중고차 직거래</button>
-        </BtnBox>
+        </BtnMenu>
       </LeftWrapper>
 
       <RightWrapper>
@@ -58,30 +59,16 @@ const Wrapper = styled.div`
   margin: auto;
   display: flex;
   padding: 10px;
-  gap: 130px;
+  gap: 210px;
 `;
 
 const LeftWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
 `;
 
-const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  img {
-    width: 30px;
-  }
-  span {
-    padding-top: 5px;
-    font-size: 24px;
-    font-weight: 800;
-    color: #ff6f0f;
-  }
-`;
-
-const BtnBox = styled.div`
+const BtnMenu = styled.div`
   padding-top: 5px;
   display: flex;
   gap: 20px;
@@ -95,32 +82,32 @@ const BtnBox = styled.div`
       color: #7a7d87;
     }
   }
-  #clicked {
+  #orange {
     color: #ff6f0f;
   }
 `;
 const RightWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 23px;
 `;
 
 const InputWrapper = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 7.5px;
 `;
 
 const ChatBtn = styled.button`
-  margin-top: 5px;
-  padding: 10px 16px;
   background-color: transparent;
+  margin-top: 5px;
+  padding: 10px 15px;
+
   border: 1px solid #b7b7b7;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 600;
   color: #212124;
+
   &:hover {
     background-color: #f2f3f6;
     color: #7a7d87;
@@ -128,7 +115,7 @@ const ChatBtn = styled.button`
 `;
 const DeleteBtn = styled.div`
   position: absolute;
-  right: 12px;
+  right: 10px;
   padding: 2px;
   display: flex;
   width: 16px;
@@ -143,15 +130,30 @@ const DeleteBtn = styled.div`
 `;
 
 const SearchBox = styled.input`
+  background-color: #f2f3f6;
   margin-top: 5px;
   padding: 6px 9px;
   border: none;
-  outline: none;
   width: 264px;
   height: 30px;
   border-radius: 5px;
-  background-color: #f2f3f6;
+
   font-size: 16px;
   font-weight: 300;
   color: #212124;
+`;
+
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    width: 35px;
+    margin-bottom: 8px;
+  }
+  span {
+    padding-top: 6px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff6f0f;
+  }
 `;
