@@ -7,8 +7,8 @@ const Banner = () => {
   return (
     <Wrapper>
       <TitleWrapper>
-        <span id="title">믿을만한</span>
-        <span id="title">이웃 간 중고거래</span>
+        <span id="first">믿을만한</span>
+        <span id="first">이웃 간 중고거래</span>
         <span id="subtitle">
           동네 주민들과 가깝고 따뜻한 거래를 <br /> 지금 경험해보세요.
         </span>
@@ -21,32 +21,34 @@ const Banner = () => {
 export default Banner;
 
 const Wrapper = styled.div`
-  height: 315px;
+  margin-top: 5px;
+  height: 300px;
   background-color: #fff1aa;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
   img {
-    height: 315px;
+    margin-left: 30px;
+    height: 300px;
   }
 `;
 
 const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 
-  #title {
+  #first {
     color: #212529;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 650;
   }
   #subtitle {
     color: #212529;
     padding-top: 8px;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 140%;
   }
 `;

@@ -7,7 +7,7 @@ const Product = () => {
   return (
     <Wrapper>
       <ImageWrapper>
-        <img src={muktae} width={220} />
+        <img src={muktae} width={200} />
       </ImageWrapper>
       <InfoWrapper>
         <span id="title">먹태깡 팔아요</span>
@@ -28,4 +28,31 @@ const ImageWrapper = styled.div`
     border-radius: 15px;
   }
 `;
-const InfoWrapper = styled.div``;
+const InfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system;
+  #title {
+    font-size: 16px;
+    font-weight: normal;
+    color: #212124;
+    margin-bottom: 6px;
+  }
+  #price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #212124;
+    margin-bottom: 6px;
+  }
+  #place {
+    font-size: 12px;
+    font-weight: 400;
+    color: #212124;
+    margin-bottom: 5px;
+  }
+  #view {
+    font-size: 12px;
+    font-weight: 400;
+    color: #868e96;
+  }
+`;

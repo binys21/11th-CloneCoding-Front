@@ -58,26 +58,27 @@ export default TopBar;
 const Wrapper = styled.div`
   margin: auto;
   display: flex;
-  padding: 10px;
   gap: 210px;
 `;
 
 const LeftWrapper = styled.div`
+  margin-left: 85px;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 28px;
 `;
 
 const BtnMenu = styled.div`
-  padding-top: 5px;
+  padding-bottom: 3px;
   display: flex;
   gap: 20px;
   button {
     background-color: transparent;
     border: none;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     color: #4d5159;
+
     &:hover {
       color: #7a7d87;
     }
@@ -86,10 +87,12 @@ const BtnMenu = styled.div`
     color: #ff6f0f;
   }
 `;
+
 const RightWrapper = styled.div`
+  padding-right: 70px;
   display: flex;
   align-items: center;
-  gap: 23px;
+  gap: 13px;
 `;
 
 const InputWrapper = styled.div`
@@ -99,12 +102,11 @@ const InputWrapper = styled.div`
 
 const ChatBtn = styled.button`
   background-color: transparent;
-  margin-top: 5px;
-  padding: 10px 15px;
 
-  border: 1px solid #b7b7b7;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 8px 13px;
+  border: 0.9px solid #b7b7b7;
+  border-radius: 4px;
+  font-size: 15px;
   font-weight: 600;
   color: #212124;
 
@@ -131,15 +133,14 @@ const DeleteBtn = styled.div`
 
 const SearchBox = styled.input`
   background-color: #f2f3f6;
-  margin-top: 5px;
-  padding: 6px 9px;
+
+  padding: 3px 9px;
   border: none;
   width: 264px;
   height: 30px;
   border-radius: 5px;
-
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 400;
   color: #212124;
 `;
 
@@ -147,12 +148,12 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   img {
-    width: 35px;
+    width: 30px;
     margin-bottom: 8px;
   }
   span {
-    padding-top: 6px;
-    font-size: 24px;
+    padding-bottom: 2px;
+    font-size: 22px;
     font-weight: 800;
     color: #ff6f0f;
   }

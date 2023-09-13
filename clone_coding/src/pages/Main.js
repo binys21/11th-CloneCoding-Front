@@ -11,20 +11,22 @@ const Main = () => {
       <TopBar />
       <Banner />
       <TextWrapper>중고거래 인기매물</TextWrapper>
-      <ProductWrapper>
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-      </ProductWrapper>
+      <Center>
+        <ProductWrapper>
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+        </ProductWrapper>
+      </Center>
     </Wrapper>
   );
 };
@@ -36,16 +38,23 @@ const Wrapper = styled.div`
   margin: auto;
 `;
 const TextWrapper = styled.div`
-  margin-top: 65px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 34px;
+  font-size: 31px;
   font-weight: 600;
   color: #212529;
 `;
 const ProductWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 45px;
+  width: 705px;
+  margin-top: 42px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+const Center = styled.div`
+  display: flex;
+  align-items: center; /* 가운데 정렬을 위해 추가 */
+  justify-content: center;
 `;
