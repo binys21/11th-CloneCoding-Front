@@ -38,15 +38,15 @@ const TitleWrapper = styled.div`
   gap: 14px;
 
   #title {
-    font-size: 34px;
-    font-weight: 700;
     color: #212529;
+    font-size: 34px;
+    font-weight: 650;
   }
   #subtitle {
+    color: #212529;
     padding-top: 8px;
     font-size: 18px;
     font-weight: 300;
     line-height: 140%;
-    color: #212529;
   }
 `;
