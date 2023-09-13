@@ -58,11 +58,11 @@ export default TopBar;
 const Wrapper = styled.div`
   margin: auto;
   display: flex;
-  gap: 210px;
+  gap: 150px;
 `;
 
 const LeftWrapper = styled.div`
-  margin-left: 85px;
+  margin-left: 75px;
   display: flex;
   align-items: center;
   gap: 28px;
