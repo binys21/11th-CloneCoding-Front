@@ -3,17 +3,18 @@ import { styled } from "styled-components";
 
 import muktae from "../images/muktae.png";
 
-const Product = () => {
+const Product = (props) => {
+  const { products } = props;
   return (
     <Wrapper>
       <ImageWrapper>
         <img src={muktae} width={200} />
       </ImageWrapper>
       <InfoWrapper>
-        <span id="title">먹태깡 팔아요</span>
-        <span id="price">1000원</span>
-        <span id="place">경남 진주시 초전동</span>
-        <span id="view">관심 11 · 채팅 45</span>
+        <span id="title">{products.title}</span>
+        <span id="price">{products.price}</span>
+        <span id="place">{products.place}</span>
+        <span id="view">{products.view}</span>
       </InfoWrapper>
     </Wrapper>
   );

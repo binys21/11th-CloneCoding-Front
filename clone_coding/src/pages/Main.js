@@ -5,6 +5,8 @@ import TopBar from "../components/TopBar";
 import Product from "../components/Product";
 import Banner from "../components/Banner";
 
+import { productData } from "../mock/productData";
+
 const Main = () => {
   return (
     <Wrapper>
@@ -13,18 +15,9 @@ const Main = () => {
       <TextWrapper>중고거래 인기매물</TextWrapper>
       <Center>
         <ProductWrapper>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          {productData.map((product) => (
+            <Product key={product.id} products={product} />
+          ))}
         </ProductWrapper>
       </Center>
     </Wrapper>
