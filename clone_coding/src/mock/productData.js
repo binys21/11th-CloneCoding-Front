@@ -1,3 +1,31 @@
+import pd1 from "../images/pdimage/pd1.png";
+import pd2 from "../images/pdimage/pd2.png";
+import pd3 from "../images/pdimage/pd3.png";
+import pd4 from "../images/pdimage/pd4.png";
+import pd5 from "../images/pdimage/pd5.png";
+import pd6 from "../images/pdimage/pd6.png";
+import pd7 from "../images/pdimage/pd7.png";
+import pd8 from "../images/pdimage/pd8.png";
+import pd9 from "../images/pdimage/pd9.png";
+import pd10 from "../images/pdimage/pd10.png";
+import pd11 from "../images/pdimage/pd11.png";
+import pd12 from "../images/pdimage/pd12.png";
+
+export const pdCover = [
+  pd1,
+  pd2,
+  pd3,
+  pd4,
+  pd5,
+  pd6,
+  pd7,
+  pd8,
+  pd9,
+  pd10,
+  pd11,
+  pd12,
+];
+
 export const productData = [
   {
     id: 1,
@@ -72,10 +100,10 @@ export const productData = [
   },
   {
     id: 11,
-    title: "플라스틱 서랍장 판매",
-    price: "7000원",
-    place: "서울 송파구 방이동",
-    view: "관심 5 · 채팅 6",
+    title: "아더에러x자라 맨투맨",
+    price: "20000원",
+    place: "서울 용산구 이태원동",
+    view: "관심 4 · 채팅 4",
   },
   {
     id: 12,
