@@ -1,8 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
 import { useLocation } from "react-router-dom";
-//data
-import { pdCover } from "../mock/productData";
 //image
 import profile from "../images/profile.png";
 //component
@@ -15,13 +13,7 @@ const Detail = () => {
   return (
     <Wrapper>
       <TopBar />
-      <ProductImg>
-        <img
-          src={pdCover[productData.id - 1]}
-          width={200}
-          alt={`Product ${productData.id}`}
-        />
-      </ProductImg>
+      <ProductImg id={productData.id} images={productData.image} />
 
       <UserInfo>
         <img src={profile} width={30} />

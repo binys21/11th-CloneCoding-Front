@@ -2,7 +2,6 @@ import React from "react";
 import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
 //date
-import { pdCover } from "../mock/productData";
 import { productData } from "../mock/productData";
 
 const Product = ({ product }) => {
@@ -15,11 +14,7 @@ const Product = ({ product }) => {
   return (
     <Wrapper onClick={goToDetail}>
       <ImageWrapper>
-        <img
-          src={pdCover[product.id - 1]}
-          width={200}
-          alt={`Product ${product.id}`}
-        />
+        <img src={product.image[0]} width={200} />
       </ImageWrapper>
       <InfoWrapper>
         <span id="title">{product.title}</span>
