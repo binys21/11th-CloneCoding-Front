@@ -1,20 +1,31 @@
 import React from "react";
 import { styled } from "styled-components";
+import { useNavigate } from "react-router-dom";
+//date
+import { pdCover } from "../mock/productData";
+import { productData } from "../mock/productData";
 
-import muktae from "../images/muktae.png";
+const Product = ({ product }) => {
+  const navigate = useNavigate();
 
-const Product = (props) => {
-  const { products } = props;
+  const goToDetail = () => {
+    navigate("/detail", { state: { productData: productData } });
+  };
+
   return (
-    <Wrapper>
+    <Wrapper onClick={goToDetail}>
       <ImageWrapper>
-        <img src={muktae} width={200} />
+        <img
+          src={pdCover[product.id - 1]}
+          width={200}
+          alt={`Product ${product.id}`}
+        />
       </ImageWrapper>
       <InfoWrapper>
-        <span id="title">{products.title}</span>
-        <span id="price">{products.price}</span>
-        <span id="place">{products.place}</span>
-        <span id="view">{products.view}</span>
+        <span id="title">{product.title}</span>
+        <span id="price">{product.price}</span>
+        <span id="place">{product.place}</span>
+        <span id="view">{product.like}</span>
       </InfoWrapper>
     </Wrapper>
   );
@@ -26,7 +37,7 @@ const Wrapper = styled.div`
 `;
 const ImageWrapper = styled.div`
   img {
-    border-radius: 15px;
+    border-radius: 10px;
   }
 `;
 const InfoWrapper = styled.div`

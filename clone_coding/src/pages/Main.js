@@ -7,7 +7,7 @@ import Banner from "../components/Banner";
 
 import { productData } from "../mock/productData";
 
-const Main = () => {
+const Main = ({ product }) => {
   return (
     <Wrapper>
       <TopBar />
@@ -16,7 +16,7 @@ const Main = () => {
       <Center>
         <ProductWrapper>
           {productData.map((product) => (
-            <Product key={product.id} products={product} />
+            <Product key={product.id} product={product} />
           ))}
         </ProductWrapper>
       </Center>
