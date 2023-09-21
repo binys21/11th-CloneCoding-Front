@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 //date
 import { productData } from "../mock/productData";
 
-const Product = ({ product }) => {
+const Product = ({ id, product }) => {
   const navigate = useNavigate();
 
   const goToDetail = () => {

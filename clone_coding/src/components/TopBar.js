@@ -117,7 +117,7 @@ const ChatBtn = styled.button`
 `;
 const DeleteBtn = styled.div`
   position: absolute;
-  right: 10px;
+  right: 230px;
   padding: 2px;
   display: flex;
   width: 16px;

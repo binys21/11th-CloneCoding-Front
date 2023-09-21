@@ -1,59 +1,36 @@
-import React from "react";
+import { React, useState } from "react";
 import { styled } from "styled-components";
+import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-//image
-import profile from "../images/profile.png";
+
+import { productData } from "../mock/productData";
 //component
 import TopBar from "../components/TopBar";
+import ProductImgSlide from "../components/ProductImgSlide";
+import Content from "../components/Content";
+import HotItem from "../components/HotItem";
 
 const Detail = () => {
-  const location = useLocation(); //useLocation으로 product 상태 정보 가져옴
+  const location = useLocation();
   const productData = location.state.productData;
+
+  const { id } = useParams();
 
   return (
     <Wrapper>
       <TopBar />
-      <ProductImg id={productData.id} images={productData.image} />
-
-      <UserInfo>
-        <img src={profile} width={30} />
-        <div>
-          <span id="username">{productData.username}</span>
-          <span id="place">{productData.place}</span>
-        </div>
-        <TempBox>
-          <span>{productData.temp} °C</span>
-          <TempBar>
-            <div
-              style={{
-                width: `${productData.temp}%`,
-              }}
-            />
-          </TempBar>
-          <span>매너온도</span>
-        </TempBox>
-      </UserInfo>
-
-      <Content>
-        <span>{productData.title}</span>
-        <span>
-          {productData.category} · {productData.when}
-        </span>
-        <span>{productData.price}원</span>
-        <div>{productData.info}</div>
-        <span>
-          {productData.like} {productData.view}
-        </span>
-      </Content>
+      <ProductImgSlide />
+      <Content product={productData} />
+      <HotItem />
     </Wrapper>
   );
 };
 
 export default Detail;
 
-const Wrapper = styled.div``;
-const Content = styled.div``;
-const ProductImg = styled.div``;
-const UserInfo = styled.div``;
-const TempBox = styled.div``;
-const TempBar = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
